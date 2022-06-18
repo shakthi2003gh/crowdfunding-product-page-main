@@ -51,9 +51,25 @@ body {
   color: var(--color-secondary);
 }
 
-h1 {
+h1,
+h2,
+h3 {
   color: var(--color-black);
+}
+
+h1 {
   font-size: 1.3rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2.5ch;
 }
 
 p {
@@ -70,6 +86,14 @@ nav.open {
 @media screen and (min-width: 550px) {
   h1 {
     font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 
   p {
@@ -185,7 +209,7 @@ nav.open li:nth-child(2) {
 main {
   display: grid;
   gap: 2rem;
-  transform: translateY(-15%);
+  transform: translateY(-55px);
 }
 
 /* >Buttons */
@@ -200,7 +224,7 @@ main {
   background-color: var(--color-accent);
 }
 
-.button--accent {
+.button--secondary {
   background-color: var(--color-secondary);
 }
 
@@ -219,6 +243,10 @@ main {
 }
 
 @media screen and (min-width: 550px) {
+  main {
+    transform: translateY(-70px);
+  }
+
   .bookmark span {
     display: inline;
     padding-right: 1.5rem;
@@ -252,6 +280,7 @@ main {
 .block1__buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
@@ -312,5 +341,53 @@ main {
     border-bottom: none;
     border-left: 1px solid var(--color-border);
     border-right: 1px solid var(--color-border);
+  }
+}
+
+/* >Block3 */
+.card-section {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.out-of-stock {
+  opacity: 0.5;
+}
+
+/* >Card */
+.card {
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.255);
+}
+
+.card__header mark {
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+.card__footer {
+  display: grid;
+  justify-content: left;
+  gap: 1.4rem;
+}
+
+.card__footer > div {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.card mark {
+  display: block;
+}
+
+@media screen and (min-width: 550px) {
+  .card__header,
+  .card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
