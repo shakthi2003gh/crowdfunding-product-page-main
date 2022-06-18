@@ -17,6 +17,10 @@ ol {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -146,4 +150,35 @@ nav.open li:nth-child(2) {
   nav.open li:nth-child(2) {
     border: none;
   }
+}
+
+/* >Buttons */
+.button {
+  padding: 0.8rem 1.8rem 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 100px;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+}
+
+.button--accent {
+  background-color: var(--color-secondary);
+}
+
+.bookmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  padding-right: 1.5rem;
+  border-radius: 100px;
+  color: var(--color-secondary);
+  background: rgb(231, 227, 227);
+}
+
+.bookmark img {
+  height: 45px;
 }
