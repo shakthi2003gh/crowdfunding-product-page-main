@@ -1,2 +1,22 @@
 @import url(/styles/normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* >Color palette */
+:root {
+  --color-primary: hsl(176, 72%, 28%);
+  --color-secondary: hsl(0, 0%, 48%);
+  --color-accent: hsl(176, 50%, 47%);
+  --color-black: hsl(0, 0%, 0%);
+}
+
+/* >Typography */
+body {
+  font-size: 16px;
+  font-family: "Commissioner", sans-serif;
+}
