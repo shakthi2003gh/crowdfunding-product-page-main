@@ -41,6 +41,16 @@ body {
   font-family: "Commissioner", sans-serif;
 }
 
+h1 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 2.5ch;
+  color: var(--color-secondary);
+}
+
 nav.open {
   font-size: 1.35rem;
   font-weight: 500;
@@ -48,6 +58,14 @@ nav.open {
 }
 
 @media screen and (min-width: 550px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
   header nav,
   nav.open {
     font-size: 1rem;
@@ -152,16 +170,29 @@ nav.open li:nth-child(2) {
   }
 }
 
+/* >Main */
+main {
+  display: grid;
+  gap: 1rem;
+  transform: translateY(-15%);
+}
+
+/* >Blocks */
+.block {
+  max-width: 700px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.255);
+}
+
 /* >Buttons */
 .button {
-  padding: 0.8rem 1.8rem 1rem;
+  padding: 1rem 1.8rem;
   text-align: center;
   color: white;
   border-radius: 100px;
 }
 
 .button--primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
 }
 
 .button--accent {
@@ -173,12 +204,47 @@ nav.open li:nth-child(2) {
   align-items: center;
   gap: 1rem;
   font-weight: bold;
-  padding-right: 1.5rem;
   border-radius: 100px;
   color: var(--color-secondary);
   background: rgb(231, 227, 227);
 }
 
-.bookmark img {
-  height: 45px;
+.bookmark span {
+  display: none;
+}
+
+@media screen and (min-width: 550px) {
+  .bookmark span {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+}
+/* >Block1 */
+.block1 {
+  text-align: center;
+  border-radius: 10px;
+  width: 85%;
+  padding: 2rem 1.2rem;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+}
+
+.block1::after {
+  position: absolute;
+  top: 0;
+  content: url(/images/logo-mastercraft.svg);
+  transform: translate(-50%, -50%);
+}
+
+.block1__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.block1 .button--primary {
+  width: 100%;
+  max-width: 214px;
 }
